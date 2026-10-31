@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Printing Solution</title>
+    <style>
+        :root {
+            --primary-color: #0284c7;
+            --primary-hover: #0369a1;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-color: #1e293b;
+            --border-color: #cbd5e1;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 30px auto;
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 15px;
+        }
+
+        h1 {
+            margin: 0;
+            color: var(--primary-color);
+            font-size: 2.3rem;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            margin: 5px 0 0 0;
+            font-size: 1.1rem;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Responsive 3D Printer SVG Artwork */
+        .image-banner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 25px;
+            background: #f0fdf4;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #bbf7d0;
+        }
+
+        .image-banner svg {
+            width: 100%;
+            max-width: 140px;
+            height: auto;
+        }
+
+        /* Form Layout */
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 15px;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 0.95rem;
+            background-color: #fff;
+            transition: border-color 0.2s;
+        }
+
+        textarea {
+            resize: vertical;
+            font-family: inherit;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.1);
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.2s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: var(--primary-hover);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>3D Printing Solution</h1>
+            <p class="subtitle">Karape Enterprises</p>
+        </div>
+
+        <!-- Lightweight Scalable Vector Graphic of a 3D Printing Process -->
+        <div class="image-banner">
+            <svg viewBox="0 0 100 100" xmlns="http://w3.org">
+                <!-- Printer Frame -->
+                <path d="M15,80 L85,80 M25,80 L25,20 L75,20 L75,80" fill="none" stroke="#334155" stroke-width="4" stroke-linecap="round"/>
+                <!-- Gantry Rail -->
+                <line x1="25" y1="40" x2="75" y2="40" stroke="#64748b" stroke-width="3"/>
+                <!-- Print Head / Extruder -->
+                <rect x="42" y="32" width="16" height="12" fill="#0284c7" rx="2"/>
+                <polygon points="47,44 53,44 50,50" fill="#0f172a"/>
+                <!-- Filament Spool & Thread -->
+                <circle cx="50" cy="12" r="6" fill="none" stroke="#cbd5e1" stroke-width="3"/>
+                <path d="M50,18 L50,32" fill="none" stroke="#0284c7" stroke-width="1.5" stroke-dasharray="2,2"/>
+                <!-- 3D Printed Object (Layer by Layer Effect) -->
+                <path d="M35,80 L40,68 L60,68 L65,80 Z" fill="#22c55e" opacity="0.8"/>
+                <path d="M40,68 L45,56 L55,56 L60,68 Z" fill="#16a34a"/>
+                <!-- Extrusion Sparkle/Nozzle Point -->
+                <circle cx="50" cy="51" r="1.5" fill="#f59e0b"/>
+            </svg>
+        </div>
+
+        <!-- Formspree Submission Form -->
+        <form action="https://formspree.io/f/mpppjbjb" method="POST">
+            
+            <!-- Customer Contact Info -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="customer_name" required placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                    <label for="contact">Contact Number</label>
+                    <input type="text" id="contact" name="contact_number" required placeholder="Phone Number">
+                </div>
+            </div>
+
+            <!-- 3D Printing Dropdown Options -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="filament">Filament Material</label>
+                    <select id="filament" name="filament_material" required>
+                        <option value="" disabled selected>Select Material</option>
+                        <option value="PLA">PLA</option>
+                        <option value="PETG">PETG</option>
+                        <option value="PETG CF">PETG CF</option>
+                        <option value="ABS">ABS</option>
+                        <option value="ASA">ASA</option>
+                        <option value="TPU">TPU</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="layer-height">Layer Height (mm)</label>
+                    <select id="layer-height" name="layer_height" required>
+                        <option value="" disabled selected>Select Height</option>
+                        <option value="0.16mm">0.16 mm</option>
+                        <option value="0.20mm">0.20 mm</option>
+                        <option value="0.30mm">0.30 mm</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="infill">Infill Percentage</label>
+                    <select id="infill" name="infill_percentage" required>
+                        <option value="" disabled selected>Select Infill</option>
+                        <option value="10%">10%</option>
+                        <option value="20%">20%</option>
+                        <option value="40%">40%</option>
+                        <option value="60%">60%</option>
+                        <option value="80%">80%</option>
+                        <option value="100%">100%</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="outer-walls">Outer Walls (Count)</label>
+                    <select id="outer-walls" name="outer_wall_count" required>
+                        <option value="" disabled selected>Select Walls</option>
+                        <option value="2">2 Walls</option>
+                        <option value="3">3 Walls</option>
+                        <option value="4">4 Walls</option>
+                        <option value="5+">5+ Walls</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- File Link Input -->
+            <div class="form-group">
+                <label for="drive-link">Google Drive File Link</label>
+                <input type="url" id="drive-link" name="google_drive_link" required placeholder="https://google.com...">
+            </div>
+
+            <!-- Added Field: Other Details / Special Requirements -->
+            <div class="form-group">
+                <label for="other-details">Other Details / Special Requirements</label>
+                <textarea id="other-details" name="other_details" rows="3" placeholder="Add any specific color requirements, post-processing preferences, delivery deadlines, or instructions here..."></textarea>
+            </div>
+
+            <button type="submit">Submit Quotation Request</button>
+        </form>
+    </div>
+
+</body>
+</html>
